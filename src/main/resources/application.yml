@@ -1,0 +1,23 @@
+server:
+  port: 8181
+
+spring:
+  application:
+    name: M10Cashier
+
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5444/m10
+    username: user
+    password: pass
+
+  jpa:
+    open-in-view: false
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+
+
+  liquibase:
+    change-log: classpath:/liquibase/liquibase-master.yaml

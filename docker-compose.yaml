@@ -1,0 +1,14 @@
+version: '3.9'
+services:
+
+  dev-db-m10:
+    container_name: dev-db-m10
+    image: postgres
+    volumes:
+      - .db-data/m10-data:/var/lib/postgresql/data
+    environment:
+      POSTGRES_USER: 'user'
+      POSTGRES_PASSWORD: 'pass'
+      POSTGRES_DB: 'm10'
+    ports:
+      - '5444:5432'
